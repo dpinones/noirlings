@@ -5,8 +5,6 @@
 // Basic Trait Implementation
 // This exercise introduces basic trait definition and implementation
 
-// I AM NOT DONE
-
 // A trait for shapes that can calculate their area
 trait Shape {
     fn area(self) -> Field;

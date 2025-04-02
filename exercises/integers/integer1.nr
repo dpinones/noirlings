@@ -1,5 +1,4 @@
 // integer1.nr
-// I AM NOT DONE
 use std::{wrapping_add,wrapping_mul};
 
 fn calculate_game_score(kills: u8, deaths: u8, assists: u8) -> u8 {
@@ -7,6 +6,11 @@ fn calculate_game_score(kills: u8, deaths: u8, assists: u8) -> u8 {
     // score = (kills * 2) + assists - deaths
     // Use wrapping_add and wrapping_sub to handle overflow
     // If deaths are more than kills*2 + assists, return 0
+    if deaths >  wrapping_add(wrapping_mul(kills, 2), assists) {
+        0
+    } else {
+        wrapping_add(wrapping_mul(kills, 2), assists) - deaths
+    }
 }
 
 fn main() {

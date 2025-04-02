@@ -1,12 +1,10 @@
 // slice4.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
-struct Stats {
-    sum: Field,
-    count: Field,
-}
+// struct Stats {
+//     sum: Field,
+//     count: Field,
+// }
 
 fn calculate_average(numbers: [Field]) -> Field {
     // TODO:
@@ -14,6 +12,8 @@ fn calculate_average(numbers: [Field]) -> Field {
     // 2. Calculate and return the average
     // Hint: Create a Stats struct to hold intermediate values
     // Your code here
+    let folded = numbers.fold(0, |a, b| a + b);
+    (folded as u32 / numbers.len()) as Field
 }
 
 fn main() {
@@ -28,4 +28,4 @@ fn test_reduction() {
     main();
 }
 
-//PS: This is though one. don't hesitate using hint😄
+// PS: This is though one. don't hesitate using hint

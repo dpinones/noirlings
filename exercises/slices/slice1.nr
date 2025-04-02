@@ -1,8 +1,6 @@
 // slice1.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 fn main() {
     // TODO:
     // 1. Create a slice with initial values [1, 2, 3]
@@ -10,6 +8,9 @@ fn main() {
     // 3. Add element 0 to the beginning of the slice
     // Your code here
     // Tests
+    let mut slice = &[1, 2, 3];
+    slice = slice.push_back(4);
+    slice = slice.push_front(0);
 
     assert(slice.len() == 5);
     assert(slice[0] == 0);

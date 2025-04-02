@@ -1,8 +1,6 @@
 // slice5.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 struct Transaction {
     amount: Field,
     valid: bool,
@@ -17,6 +15,9 @@ fn process_transactions(transactions: [Transaction]) -> Field {
 
     // Your code here
 
+    let valid_transactions = transactions.filter(|x| x.valid == true);
+    let amounts = valid_transactions.map(|a| a.amount); 
+    let sum = amounts.reduce(|a, b| a + b);
     sum
 }
 

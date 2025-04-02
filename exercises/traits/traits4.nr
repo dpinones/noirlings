@@ -2,9 +2,6 @@
 // use the `hint` watch subcommand for a hint.
 // Default Trait Methods: This exercise shows how to work with default trait methods
 
-// I AM NOT DONE
-
-
 trait Counter {
   fn increment(self) -> Self;
   

@@ -2,8 +2,6 @@
 // use the `hint` watch subcommand for a hint.
 // Trait Bounds: This exercise demonstrates how to use trait bounds with generics
 
-// I AM NOT DONE
-
 trait Maximum {
     fn max(self, other: Self) -> Self;
 }
@@ -12,6 +10,11 @@ trait Maximum {
 // that implements Maximum and returns the maximum value
 fn find_maximum<T>(values: [T; 5]) -> T where T: Maximum {
     // Add your implementation here
+    let mut max = values[0];
+    for i in 1..values.len() {
+        max = max.max(values[i]);
+    }
+    max
 }
 
 // Here's an implementation of Maximum for Field to help test your function
@@ -20,7 +23,7 @@ impl Maximum for Field {
         if self.lt(other) {
             other
         } else {
-          self
+            self
         }
     }
 }

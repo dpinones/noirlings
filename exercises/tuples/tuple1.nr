@@ -1,11 +1,9 @@
 // tuples1.nr
 // Use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
-
 fn create_person(name: str<10>, age: Field, zip: Field) -> (str<10>,Field,Field) {
     // TODO: Create and return a tuple with the given parameters
+    (name, age, zip)
 }
 
 fn main() {
