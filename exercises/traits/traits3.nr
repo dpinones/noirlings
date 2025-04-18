@@ -5,11 +5,15 @@
 trait Convert<T> {
     fn convert(self) -> T;
 }
+}
 
 struct Celsius {
     temp: Field,
 }
 
+struct Fahrenheit {
+    temp: Field,
+}
 struct Fahrenheit {
     temp: Field,
 }
@@ -30,7 +34,16 @@ fn test_temperature_conversion() {
     let celsius = Celsius { temp: 0 };
     let fahrenheit = celsius.convert();
     assert(fahrenheit.temp == 32);
+#[test]
+fn test_temperature_conversion() {
+    let celsius = Celsius { temp: 0 };
+    let fahrenheit = celsius.convert();
+    assert(fahrenheit.temp == 32);
 
+    let celsius = Celsius { temp: 100 };
+    let fahrenheit = celsius.convert();
+    assert(fahrenheit.temp == 212);
+}
     let celsius = Celsius { temp: 100 };
     let fahrenheit = celsius.convert();
     assert(fahrenheit.temp == 212);
