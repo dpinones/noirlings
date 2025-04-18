@@ -3,9 +3,6 @@
 
 use std::{wrapping_add,wrapping_mul};
 
-// I AM NOT DONE
-
-
 fn celsius_to_fahrenheit(celsius: i16) -> i16 {
     // TODO: Convert Celsius to Fahrenheit
     // Formula: (celsius * 9/5) + 32
